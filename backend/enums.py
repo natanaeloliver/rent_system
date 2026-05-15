@@ -8,6 +8,7 @@ class ModalidadeEnum(str, enum.Enum):
     incubacao_distancia = "incubacao_distancia"
     adesao = "adesao"
     termo_cooperacao = "termo_cooperacao"
+    termo_aditivo = "termo_aditivo"  # TA — aditivo a um contrato-pai
 
 
 class StatusContratoEnum(str, enum.Enum):
@@ -35,3 +36,14 @@ class TipoDescontoEnum(str, enum.Enum):
     fixo = "fixo"
     percentual = "percentual"
     contratual = "contratual"
+
+
+class StatusJuridicoEnum(str, enum.Enum):
+    ok = "ok"
+    pendente = "pendente"
+
+
+class CriterioRateioEnum(str, enum.Enum):
+    por_area = "por_area"          # proporcional à área m² de cada locatário
+    por_contrato = "por_contrato"  # divisão igualitária entre contratos ativos
+    fixo_por_sala = "fixo_por_sala"  # valor fixo por sala (informado diretamente)

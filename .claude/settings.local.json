@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/natan/Downloads/**)",
+      "Bash(Get-ChildItem \"Financeiro e jurídico UNITEC SL V11.xlsx\" -ErrorAction SilentlyContinue)",
+      "Bash(Select-Object -Property Name, Length, LastWriteTime)",
+      "Bash(cat)",
+      "Bash(python3 /tmp/analyze_excel.py)",
+      "Bash(sed 's/<si><t>//;s/<\\\\/t><\\\\/si>//')",
+      "Read(//tmp/**)"
+    ]
+  }
+}

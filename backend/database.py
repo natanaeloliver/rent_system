@@ -35,5 +35,5 @@ def get_db():
 
 def init_db():
     # Import all models so Base knows about them before create_all
-    from backend.models import empresa, contrato, sala, cobranca, taxa  # noqa: F401
+    from backend.models import empresa, contrato, sala, cobranca, taxa, custo_local, configuracao  # noqa: F401
     Base.metadata.create_all(bind=engine)
